@@ -1,16 +1,11 @@
 This is my personal settings for gvim. 
 This includes the following plugins:
 
-<a href="http://www.vim.org/scripts/script.php?script_id=1658">NERD_tree (4.1.0)</a> -> Navegador de ficheros.
-
-<a href="http://www.vim.org/scripts/script.php?script_id=1218">Nerdcommenter (2.3.0)</a> ->Comandos inteligentes para comentar y descomentar el código.
-
-<a href="http://www.vim.org/scripts/script.php?script_id=1218">taglist (4.5)</a> -> Necesario el paquete exuberant ctags. En fedora 15 ctags.x86_64. Permite navegar por el código, como el outline de eclipse por ejemplo.
-
-<a href="http://www.vim.org/scripts/script.php?script_id=1567">rails.vim (4.3)</a> -> Plugin para Ruby on Rails
-
-<a href="http://www.vim.org/scripts/script.php?script_id=42">bufexplorer (7.2.8)</a> -> Permite visualizar todos los buffers abiertos y navegar por ellos usando cursores y el ratón
-
+NERD_tree (4.1.0) -> Navegador de ficheros.
+Nerdcommenter (2.3.0) ->Comandos inteligentes para comentar y descomentar el código.
+taglist (4.5) -> Necesario el paquete exuberant ctags. En fedora 15 ctags.x86_64. Permite navegar por el código, como el outline de eclipse por ejemplo.
+rails.vim (4.3) -> Plugin para Ruby on Rails
+bufexplorer (7.2.8) -> Permite visualizar todos los buffers abiertos y navegar por ellos usando cursores y el ratón
 mru.vim (3.3) -> Lista los ficheros abiertos recientemente
 xml.vim (1.40) -> Cierra y anida automáticamente las etiquetas XML/HTML y nos permite operaciones sobre ellas.
 vim-fuzzyfinder (4.2.2) -> Permite abrir ficheros navegando por el arbol de directorios, al estilo de una consola de comandos, no gráficamente como NERDtree. Requiere la libreria L9 (http://www.vim.org/scripts/script.php?script_id=3252)
