@@ -83,3 +83,6 @@ set hlsearch
 
 " autocompletar comandos
 set wildmode=list:longest,full
+
+" mark 80 and 120 characters
+set colorcolumn=80,120
