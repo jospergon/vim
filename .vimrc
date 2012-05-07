@@ -86,3 +86,6 @@ set wildmode=list:longest,full
 
 " mark 80 and 120 characters
 set colorcolumn=80,120
+
+" tidy
+:vmap ,x :!tidy -q -i --show-errors 0<CR>
