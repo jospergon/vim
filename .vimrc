@@ -89,3 +89,14 @@ set colorcolumn=80,120
 
 " tidy
 :vmap ,x :!tidy -q -i --show-errors 0<CR>
+
+" Configure coffescript Syntax Highlighting
+" hi link coffeeSpaceError NONE
+hi link coffeeSpaceError NONE
+" Trailing semicolons are also considered an error (for help transitioning from JavaScript.) 
+" This can be disabled with:
+hi link coffeeSemicolonError NONE
+" To fold by indentation in CoffeeScript files
+au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+" To get standard two-space indentation in CoffeeScript files
+au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
