@@ -36,7 +36,7 @@ map <f11> :set nopaste<cr>
 " Colores que no te dejan ciego (al gusto del consumidor, se puede escribir
 " :color e ir dando a tab para ver las combinaciones existentes, hay más en
 " vim.org)
-colors desert
+colors zenburn
 
 " Que no haga la ventana de gvim demasiado pequeña
 au GUIEnter * set lines=80 columns=160
@@ -100,3 +100,6 @@ hi link coffeeSemicolonError NONE
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 " To get standard two-space indentation in CoffeeScript files
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+
+" To highlight current line
+set cursorline
