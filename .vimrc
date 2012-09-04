@@ -1,4 +1,4 @@
-filetype plugin on
+filetype indent plugin on
 
 " F2 = OmniComplete
 imap <f2> <c-x><c-o>
@@ -36,7 +36,7 @@ map <f11> :set nopaste<cr>
 " Colores que no te dejan ciego (al gusto del consumidor, se puede escribir
 " :color e ir dando a tab para ver las combinaciones existentes, hay más en
 " vim.org)
-colors zenburn
+colors desert
 
 " Que no haga la ventana de gvim demasiado pequeña
 au GUIEnter * set lines=80 columns=160
