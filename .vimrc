@@ -37,6 +37,7 @@ map <f11> :set nopaste<cr>
 " :color e ir dando a tab para ver las combinaciones existentes, hay más en
 " vim.org)
 colors desert
+colors grb256
 
 " Que no haga la ventana de gvim demasiado pequeña
 au GUIEnter * set lines=80 columns=160
@@ -103,3 +104,12 @@ au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
 " To highlight current line
 set cursorline
+
+" Map FufFileCoverageFile
+nmap ,t :FufCoverageFile<CR>
+" Map FufBuffer
+nmap ,b :FufBuffer<CR>
+" not backup files
+set nobackup
+" not swap files
+set noswapfile
