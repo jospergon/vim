@@ -17,6 +17,12 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
+autocmd BufNewFile,BufRead *.coffee set filetype=coffee
+
+" autocmd VimEnter * NERDTree
+" autocmd BufEnter * NERDTreeMirror
+" autocmd VimEnter * wincmd w
+
 "improve autocomplete menu color
 highlight Pmenu ctermbg=238 gui=bold
 
@@ -31,6 +37,9 @@ map <c-t> <esc>:tabnew<cr>
 map <c-pageup> :tabp<cr>
 map <c-pagedown> :tabn<cr>
 
+" Cerrar pestaña
+map <c-w> <esc>:close<cr>
+
 " F10 activa modo pegar (no autoindenta, no descoloca lo que pegamos), F11
 " lo desactiva
 map <f10> :set paste<cr>
@@ -40,7 +49,6 @@ map <f11> :set nopaste<cr>
 " :color e ir dando a tab para ver las combinaciones existentes, hay más en
 " vim.org)
 colors desert
-colors grb256
 
 " Que no haga la ventana de gvim demasiado pequeña
 au GUIEnter * set lines=80 columns=160
@@ -94,17 +102,6 @@ set colorcolumn=80,120
 
 " tidy
 :vmap ,x :!tidy -q -i --show-errors 0<CR>
-
-" Configure coffescript Syntax Highlighting
-" hi link coffeeSpaceError NONE
-hi link coffeeSpaceError NONE
-" Trailing semicolons are also considered an error (for help transitioning from JavaScript.) 
-" This can be disabled with:
-hi link coffeeSemicolonError NONE
-" To fold by indentation in CoffeeScript files
-au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
-" To get standard two-space indentation in CoffeeScript files
-au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
 " To highlight current line
 set cursorline
