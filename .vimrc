@@ -51,7 +51,7 @@ map <f11> :set nopaste<cr>
 colors desert
 
 " Que no haga la ventana de gvim demasiado pequeña
-au GUIEnter * set lines=80 columns=160
+au GUIEnter * set lines=120 columns=160
 
 " Plugin taglist
 " F5 muestra el frame de tags
@@ -98,7 +98,7 @@ set hlsearch
 set wildmode=list:longest,full
 
 " mark 80 and 120 characters
-set colorcolumn=80,120
+set colorcolumn=120
 
 " tidy
 :vmap ,x :!tidy -q -i --show-errors 0<CR>
@@ -114,3 +114,5 @@ nmap ,b :FufBuffer<CR>
 set nobackup
 " not swap files
 set noswapfile
+
+set guioptions-=T  "remove toolbar
