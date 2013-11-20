@@ -16,7 +16,7 @@ autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-
+autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 
 " autocmd VimEnter * NERDTree
@@ -48,7 +48,7 @@ map <f11> :set nopaste<cr>
 " Colores que no te dejan ciego (al gusto del consumidor, se puede escribir
 " :color e ir dando a tab para ver las combinaciones existentes, hay más en
 " vim.org)
-colors desert
+colors codeschool
 
 " Que no haga la ventana de gvim demasiado pequeña
 au GUIEnter * set lines=120 columns=160
@@ -98,7 +98,7 @@ set hlsearch
 set wildmode=list:longest,full
 
 " mark 80 and 120 characters
-set colorcolumn=120
+set colorcolumn=80,120
 
 " tidy
 :vmap ,x :!tidy -q -i --show-errors 0<CR>
