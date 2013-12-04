@@ -48,7 +48,7 @@ map <f11> :set nopaste<cr>
 " Colores que no te dejan ciego (al gusto del consumidor, se puede escribir
 " :color e ir dando a tab para ver las combinaciones existentes, hay más en
 " vim.org)
-colors codeschool
+colors desert
 
 " Que no haga la ventana de gvim demasiado pequeña
 au GUIEnter * set lines=120 columns=160
@@ -116,3 +116,6 @@ set nobackup
 set noswapfile
 
 set guioptions-=T  "remove toolbar
+
+" Show NERDTree
+map <F6> :NERDTreeToggle<cr>
