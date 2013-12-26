@@ -19,6 +19,7 @@ Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-less'
 Bundle 'taglist.vim'
+Bundle 'kchmck/vim-coffee-script'
 
 filetype plugin indent on     " required!
 
