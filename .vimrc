@@ -20,6 +20,10 @@ Bundle 'tpope/vim-rails'
 Bundle 'vim-less'
 Bundle 'taglist.vim'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-surround'
+Bundle 'jiangmiao/auto-pairs'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'jpo/vim-railscasts-theme'
 
 filetype plugin indent on     " required!
 
@@ -37,7 +41,9 @@ map <c-pagedown> :tabn<cr>
 " Colores que no te dejan ciego (al gusto del consumidor, se puede escribir
 " " :color e ir dando a tab para ver las combinaciones existentes, hay más en
 " " vim.org)
-colors desert
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
 
 " Plugin taglist
 " " F5 muestra el frame de tags
