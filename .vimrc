@@ -24,6 +24,11 @@ Bundle 'tpope/vim-surround'
 Bundle 'jiangmiao/auto-pairs'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jpo/vim-railscasts-theme'
+Bundle 'bling/vim-airline'
+Bundle 'bling/vim-bufferline'
+Bundle 'Lokaltog/powerline-fonts'
+
+
 
 filetype plugin indent on     " required!
 
@@ -63,8 +68,8 @@ let Tlist_WinWidth = 40
 map <f4> \be
 
 " " switch to previous/next buffer
-nnoremap <C-p> :BufSurfBack<CR>
-nnoremap <C-n> :BufSurfForward<CR>
+nnoremap <C-p> :bprevious<CR>
+nnoremap <C-n> :bnext<CR>
 
 " tamaño (en espacios) de los tabuladores
 set expandtab
@@ -104,3 +109,10 @@ nmap ,b :FufBuffer<CR>
 
 " Show NERDTree
 map <F6> :NERDTreeToggle<cr>
+
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='molokai'
+
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
