@@ -8,6 +8,7 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
+Bundle 'thoughtbot/vim-rspec'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'tpope/vim-fugitive'
@@ -27,6 +28,7 @@ Bundle 'jpo/vim-railscasts-theme'
 Bundle 'bling/vim-airline'
 Bundle 'bling/vim-bufferline'
 Bundle 'Lokaltog/powerline-fonts'
+Bundle 'tpope/vim-rvm'
 
 
 
@@ -115,4 +117,10 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='molokai'
 
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
+"set font=DejaVu\ Sans\ Mono\ for\ Powerline
+
+" vim-rspec mappings
+map .t :call RunCurrentSpecFile()<CR>
+map .s :call RunNearestSpec()<CR>
+map .l :call RunLastSpec()<CR>
+map .a :call RunAllSpecs()<CR>
