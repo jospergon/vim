@@ -1,8 +1,8 @@
 set nocompatible              " be iMproved
 filetype off                  " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
@@ -30,7 +30,7 @@ Bundle 'bling/vim-bufferline'
 Bundle 'Lokaltog/powerline-fonts'
 Bundle 'tpope/vim-rvm'
 
-
+call vundle#end()
 
 filetype plugin indent on     " required!
 
@@ -48,8 +48,13 @@ map <c-pagedown> :tabn<cr>
 " Colores que no te dejan ciego (al gusto del consumidor, se puede escribir
 " " :color e ir dando a tab para ver las combinaciones existentes, hay más en
 " " vim.org)
-let g:solarized_termcolors=256
+syntax enable
+if !has('gui_running')
+  let g:solarized_termcolors=256
+endif
 set background=dark
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
 colorscheme solarized
 
 " Plugin taglist
@@ -117,10 +122,13 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='molokai'
 
-"set font=DejaVu\ Sans\ Mono\ for\ Powerline
+set guifont=Monaco\ for\ Powerline:h12
 
 " vim-rspec mappings
 map .t :call RunCurrentSpecFile()<CR>
 map .s :call RunNearestSpec()<CR>
 map .l :call RunLastSpec()<CR>
 map .a :call RunAllSpecs()<CR>
+let g:rspec_runner = "os_x_iterm2"
+
+"set shellcmdflag=-ic
