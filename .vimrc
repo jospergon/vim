@@ -29,6 +29,7 @@ Bundle 'bling/vim-airline'
 Bundle 'bling/vim-bufferline'
 Bundle 'Lokaltog/powerline-fonts'
 Bundle 'tpope/vim-rvm'
+Bundle 'vim-ruby/vim-ruby'
 
 call vundle#end()
 
@@ -36,6 +37,8 @@ filetype plugin indent on     " required!
 
 " Muestra los números de línea
 set number
+
+autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 
 " Atajos para pestañas como los de Firefox/Chrome/Opera/etc
 " " Control T nueva pestaña (la cerramos con :q)
