@@ -30,6 +30,7 @@ Bundle 'bling/vim-bufferline'
 Bundle 'Lokaltog/powerline-fonts'
 Bundle 'tpope/vim-rvm'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'jgdavey/tslime.vim'
 
 call vundle#end()
 
@@ -39,6 +40,8 @@ filetype plugin indent on     " required!
 set number
 
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
+
+let mapleader = ','
 
 " Atajos para pestañas como los de Firefox/Chrome/Opera/etc
 " " Control T nueva pestaña (la cerramos con :q)
@@ -112,7 +115,7 @@ set colorcolumn=80,120
 set cursorline
 
 " Map FufFileCoverageFile
-nmap ,t :FufCoverageFile<CR>
+" nmap ,t :FufCoverageFile<CR>
 
 " Map FufBuffer
 nmap ,b :FufBuffer<CR>
@@ -128,10 +131,13 @@ let g:airline_theme='molokai'
 set guifont=Monaco\ for\ Powerline:h12
 
 " vim-rspec mappings
-map .t :call RunCurrentSpecFile()<CR>
-map .s :call RunNearestSpec()<CR>
-map .l :call RunLastSpec()<CR>
-map .a :call RunAllSpecs()<CR>
-let g:rspec_runner = "os_x_iterm2"
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 "set shellcmdflag=-ic
+
+let g:rspec_command = 'call Send_to_Tmux("zeus rspec {spec}\n")'
+let g:rspec_runner = "os_x_iterm2"
+
