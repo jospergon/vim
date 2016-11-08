@@ -118,7 +118,7 @@ set cursorline
 " nmap ,t :FufCoverageFile<CR>
 
 " Map FufBuffer
-nmap ,b :FufBuffer<CR>
+nmap <Leader>b :FufBuffer<CR>
 
 " Show NERDTree
 map <F6> :NERDTreeToggle<cr>
@@ -141,3 +141,4 @@ map <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_command = 'call Send_to_Tmux("zeus rspec {spec}\n")'
 let g:rspec_runner = "os_x_iterm2"
 
+map <Leader>c :call Send_to_Tmux("zeus cucumber ".expand("%")."\n")
