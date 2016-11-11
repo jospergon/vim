@@ -141,4 +141,4 @@ map <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_command = 'call Send_to_Tmux("zeus rspec {spec}\n")'
 let g:rspec_runner = "os_x_iterm2"
 
-map <Leader>c :call Send_to_Tmux("zeus cucumber ".expand("%")."\n")
+map <Leader>c :call Send_to_Tmux("zeus cucumber ".expand("%")."\n")<CR>
