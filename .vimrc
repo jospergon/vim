@@ -31,7 +31,7 @@ Bundle 'Lokaltog/powerline-fonts'
 Bundle 'tpope/vim-rvm'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'jgdavey/tslime.vim'
-Bundle 'mileszs/ack.vim'
+Plugin 'mileszs/ack.vim'
 
 call vundle#end()
 
