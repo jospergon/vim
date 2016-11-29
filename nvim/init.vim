@@ -13,7 +13,7 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-commentary'
 Bundle 'snipMate'
 Bundle 'AutoComplPop'
 Bundle 'tpope/vim-haml'
@@ -32,6 +32,7 @@ Bundle 'tpope/vim-rvm'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'jgdavey/tslime.vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'wincent/command-t'
 
 call vundle#end()
 
@@ -132,7 +133,7 @@ let g:airline_theme='molokai'
 set guifont=Monaco\ for\ Powerline:h12
 
 " vim-rspec mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>r :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
@@ -143,3 +144,12 @@ let g:rspec_command = 'call Send_to_Tmux("zeus rspec {spec}\n")'
 let g:rspec_runner = "os_x_iterm2"
 
 map <Leader>c :call Send_to_Tmux("zeus cucumber ".expand("%")."\n")<CR>
+
+let g:CommandTEncoding='UTF-8'
+let g:CommandTFileScanner='watchman'
+let g:CommandTMaxCachedDirectories=10
+let g:CommandTMaxFiles=1000000
+let g:CommandTScanDotDirectories=1
+let g:CommandTTraverseSCM='pwd'
+let g:CommandTWildIgnore=&wildignore
+let g:CommandTWildIgnore.=',*/.git'
