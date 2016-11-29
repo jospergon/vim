@@ -33,6 +33,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'jgdavey/tslime.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'wincent/command-t'
+Plugin 'neomake/neomake'
 
 call vundle#end()
 
@@ -153,3 +154,5 @@ let g:CommandTScanDotDirectories=1
 let g:CommandTTraverseSCM='pwd'
 let g:CommandTWildIgnore=&wildignore
 let g:CommandTWildIgnore.=',*/.git'
+
+autocmd! BufWritePost * Neomake
