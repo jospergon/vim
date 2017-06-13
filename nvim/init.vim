@@ -61,7 +61,7 @@ syntax enable
 if !has('gui_running')
   let g:solarized_termcolors=256
 endif
-set background=dark
+set background=light
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 colorscheme solarized
@@ -114,9 +114,6 @@ set colorcolumn=80,120
 " tidy
 :vmap ,x :!tidy -q -i --show-errors 0<CR>
 
-" To highlight current line
-set cursorline
-
 " Map FufFile
 nmap <Leader>f :FufFile<CR>
 
@@ -142,6 +139,7 @@ map <Leader>a :call RunAllSpecs()<CR>
 "set shellcmdflag=-ic
 
 let g:rspec_command = 'call Send_to_Tmux("zeus rspec {spec}\n")'
+" let g:rspec_command = '!zeus rspec --color {spec}'
 let g:rspec_runner = "os_x_iterm2"
 
 map <Leader>c :call Send_to_Tmux("zeus cucumber ".expand("%")."\n")<CR>
@@ -156,3 +154,13 @@ let g:CommandTWildIgnore=&wildignore
 let g:CommandTWildIgnore.=',*/.git'
 
 autocmd! BufWritePost * Neomake
+
+if has('nvim')
+  let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
+endif
+
+nmap <leader>f :!grep -r -l  * \| xargs sed -i -e 's///g'
+
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
