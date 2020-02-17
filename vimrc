@@ -8,18 +8,13 @@ call vundle#begin()
 " required! 
 Bundle 'gmarik/vundle'
 
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Plugin 'tpope/vim-commentary'
-Bundle 'snipMate'
 Bundle 'AutoComplPop'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-less'
-Bundle 'taglist.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-surround'
 Bundle 'jiangmiao/auto-pairs'
@@ -32,8 +27,8 @@ Bundle 'tpope/vim-rvm'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'jgdavey/tslime.vim'
 Plugin 'mileszs/ack.vim'
-Plugin 'wincent/command-t'
-Plugin 'neomake/neomake'
+Plug 'junegunn/fzf', { 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
 
 call vundle#end()
 
@@ -65,20 +60,6 @@ set background=light
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 colorscheme solarized
-
-" Plugin taglist
-" " F5 muestra el frame de tags
-map <f5> :TlistToggle<cr>
-
-" Plugin taglist
-" " F5 muestra el frame de tags
-map <f5> :TlistToggle<cr>
-
-" Poner el frame en la derecha que el Project ya lo pone a la izquierda
-let Tlist_Use_Right_Window = 1
-
-" Tamaño mínimo de frame de tags
-let Tlist_WinWidth = 40
 
 " Buffer explorer con F4
 map <f4> \be
@@ -127,39 +108,6 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='molokai'
-
-set guifont=Monaco\ for\ Powerline:h12
-
-" vim-rspec mappings
-map <Leader>r :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
-"set shellcmdflag=-ic
-
-let g:rspec_command = 'call Send_to_Tmux("zeus rspec {spec}\n")'
-" let g:rspec_command = '!zeus rspec --color {spec}'
-let g:rspec_runner = "os_x_iterm2"
-
-map <Leader>c :call Send_to_Tmux("zeus cucumber ".expand("%")."\n")<CR>
-
-let g:CommandTEncoding='UTF-8'
-let g:CommandTFileScanner='watchman'
-let g:CommandTMaxCachedDirectories=10
-let g:CommandTMaxFiles=1000000
-let g:CommandTScanDotDirectories=1
-let g:CommandTTraverseSCM='pwd'
-let g:CommandTWildIgnore=&wildignore
-let g:CommandTWildIgnore.=',*/.git'
-
-autocmd! BufWritePost * Neomake
-
-if has('nvim')
-  let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
-endif
-
-nmap <leader>f :!grep -r -l  * \| xargs sed -i -e 's///g'
 
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
