@@ -27,8 +27,9 @@ Bundle 'tpope/vim-rvm'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'jgdavey/tslime.vim'
 Plugin 'mileszs/ack.vim'
-Plug 'junegunn/fzf', { 'do': './install --bin' }
-Plug 'junegunn/fzf.vim'
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'junegunn/fzf.vim'
+Plugin 'w0rp/ale'
 
 call vundle#end()
 
