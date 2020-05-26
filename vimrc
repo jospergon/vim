@@ -22,6 +22,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'jpo/vim-railscasts-theme'
 Bundle 'bling/vim-airline'
 Bundle 'bling/vim-bufferline'
+Plugin 'vim-airline/vim-airline-themes'
 Bundle 'Lokaltog/powerline-fonts'
 Bundle 'tpope/vim-rvm'
 Bundle 'vim-ruby/vim-ruby'
@@ -113,3 +114,5 @@ let g:airline_theme='molokai'
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
+
+nmap <Leader>t :FZF<CR>
