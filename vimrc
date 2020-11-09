@@ -30,7 +30,7 @@ Bundle 'jgdavey/tslime.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
 
 call vundle#end()
 
@@ -97,11 +97,8 @@ set colorcolumn=80,120
 " tidy
 :vmap ,x :!tidy -q -i --show-errors 0<CR>
 
-" Map FufFile
-nmap <Leader>f :FufFile<CR>
-
-" Map FufBuffer
-nmap <Leader>b :FufBuffer<CR>
+" :FIles
+nmap <Leader>t<CR>
 
 " Show NERDTree
 map <F6> :NERDTreeToggle<cr>
