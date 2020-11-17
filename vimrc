@@ -113,3 +113,11 @@ set pastetoggle=<F2>
 set showmode
 
 nmap <Leader>t :FZF<CR>
+
+" Set specific linters
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'ruby': ['rubocop', 'reek'],
+\}
+let g:airline#extensions#ale#enabled = 1
+
